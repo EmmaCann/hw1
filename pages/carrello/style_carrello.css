@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body,span{
+    font-family:"Barlow",sans-serif;
+}
+
+.small-icon{
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.medium-icon{
+    height: 20px;
+    width: 20px;
+    margin-left:  15px;
+    cursor: pointer;
+}
+
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#home {
+    outline: none;
+    border:none;
+    border: 1.5px solid rgb(17, 107, 143);
+    background-color:rgba(75, 153, 185, 0.877) ;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+
+}
+#home:hover{
+    background-color:rgba(17, 107, 143, 0.877) 
+}
+#home  a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+}
+
+#home{
+    position: absolute;
+    top:2rem;
+    left: 2rem ;
+}
+#titolo{
+    position:absolute;
+    top: 1rem;
+    left: 32rem;
+}
+.testo-empty_class{
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    width: 100%;
+    position: absolute;
+    top:15rem;
+    left:3rem;
+}
+
+/* carrello*/
+
+.cart-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+     max-height: 350px; 
+     min-width: 800px; 
+     min-height: 350px; 
+    padding: 20px;
+    margin-left:20px;
+    overflow-y:auto;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+.product-quantity, .product-price {
+    margin: 5px 0;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.remove-button:hover {
+    background-color: #ff1a1a;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 10px;
+    position: absolute;
+    bottom:2.5rem;
+}
+
+.total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.checkout-button {
+    background-color: rgb(231, 181, 55);
+    color:black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left:20px;
+}
+
+
+
+
+/* converter*/
+#converter{
+    width:20px;
+    height: 20px;
+    padding:10px;
+    cursor:pointer;
+}
+
+#currency-box{
+    position: absolute;
+    display: none;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 7px;
+    background: white;
+    top:250px;
+    left:68%;
+    border:1px solid rgb(231, 181, 55);
+    z-index: 99;
+
+}
+#currency-box header{
+    font-size:23px;
+    font-weight: 600;
+    text-align: center;
+    margin-left:2rem;
+    padding:0;
+
+}
+#currency-box #exit-icon{
+    position: absolute;
+    right: 1.2rem;
+}
+
+#currency-box .form2{
+    height: 80%;
+    width: 85%;
+    padding-left:35px;
+    position: absolute;
+    top:3.5rem;
+    left:10px;
+
+   
+}
+#currency-box .form2 p{
+    font-size:16px;
+    margin-bottom:5px;
+    text-align: center;
+    margin-right: 25px;
+}
+ #currency-box input,select ,.converterButton{
+    width:80%;
+    outline:none;
+    border:none;
+    border-radius: 5px;
+}
+#currency-box input{
+    height: 30px;
+    font-size:17px;
+    padding: 0 15px;
+    border:1px solid #999;
+    text-align: center;
+}
+#currency-box input:focus{
+    padding: 0 14px;
+    border: 1px solid rgb(231, 181, 55);
+}
+ .form2 .drop-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    margin-top:20px;
+    
+}
+
+#dl1{
+    margin:0;
+    padding:0;
+    position: absolute;
+    top:90px;
+    left:0;
+    justify-content: center;
+
+}
+#dl1 .from p ,#dl2 .to p{
+    font-size:16px;
+    margin-right:0;
+}
+#dl2{
+    margin:0;
+    padding:0;
+    position: absolute;
+    right: 0;
+    top:90px;
+    justify-content: center;
+}
+.drop-list .select-box{
+    display: flex;
+    height: 45px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.select-box select{
+    width: 70px;
+    height: 30px;
+    border:1px solid grey;
+    text-align: center;
+}
+.exchange-icon img{
+    position: absolute;
+    top:130px;
+    left:145px;
+}
+
+.exchange-rate{
+    position: absolute;
+    bottom:3.5rem;
+    left:5.5rem;
+}
+.form2 .converterButton{
+    position: absolute;
+    bottom:0.5rem;
+    height: 30px;
+    background-color:rgb(231, 181, 55) ;
+    cursor:pointer;
+    color:black;
+}
+
+
+
+
+/*pagamenti*/
+
+#titolo-pagamento{
+    position: absolute;
+    top:12rem;
+    left:25rem;
+}
+
+#testo-pagamento{
+    font-size:18px;
+    position: absolute;
+    top:20rem;
+    left:34rem;
+    margin-top:60px;
+}
+
+#tick {
+    width:50px;
+    height: 50px;
+
+}
+#denied{
+    width:60px;
+    height: 60px;
+}

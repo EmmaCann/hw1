@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styleAccess.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <script src="validate.js" defer> </script>
+  
+</head>
+<body>
+
+    <button id="home">
+        <a href="../index.php">Torna alla Home</a>
+    </button>
+    
+    <div id="error-box" class="error-message" style="display: none;"></div>
+        <div  class="outside-box"  id="login">
+          
+           
+            <form  action="login.php" method="POST" onsubmit="ajaxLogin(event);">
+                <h1>Login</h1>
+                <input id="login-username" name="username" type="text" placeholder="Username" required>
+                <input id="password" type="password" name="password" placeholder="Password" required>
+ 
+            <input id="SubmitButton" type="submit" value="Login">
+            </form>
+            <div class="recover">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            <div class="member">
+                Not a member? <a href="Sign_Up.html">Register Here</a>
+            </div>
+        </div>
+ 
+
+<script>
+    async function ajaxLogin(event) {
+        event.preventDefault();
+
+        let username = document.getElementById('login-username').value;
+        let password = document.getElementById('password').value;
+        let submitButton = document.getElementById('SubmitButton');
+        let errorBox = document.getElementById('error-box');
+
+        try {
+           
+
+            let response = await fetch('login.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'username': username,
+                    'password': password
+                })
+            });
+
+            let result = await response.json();
+
+            if (result.success) {
+                window.location.href = 'private.php';
+            } else {
+                errorBox.innerHTML = result.message;
+                errorBox.style.display = 'flex';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            errorBox.innerHTML = 'Errore durante la richiesta. Controlla la tua connessione e riprova.';
+            errorBox.style.display = 'flex';
+        } 
+    }
+</script>
+</body>
+</html>
+</html>

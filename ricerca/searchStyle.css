@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family:"Barlow",sans-serif;
+}
+
+#home {
+    outline: none;
+    border:none;
+    border: 1.5px solid rgb(17, 107, 143);
+    background-color:rgba(75, 153, 185, 0.877) ;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+
+}
+#home:hover{
+    background-color:rgba(17, 107, 143, 0.877) 
+}
+#home  a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+}
+
+#home{
+    position: absolute;
+    top:2rem;
+    left: 2rem ;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-container {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-image {
+    width: 90%;
+    height: auto;
+    padding:5px;
+}
+
+.price-tag {
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.product-desc {
+    margin-top: 10px;
+}
+.product-desc #categoria{
+    color:grey;
+}
+.small-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left:30px;
+}
