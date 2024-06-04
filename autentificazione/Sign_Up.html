@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styleAccess.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <script src="validate.js" defer ></script>
+</head>
+<body>  
+ 
+    <button id="home">
+        <a href="../index.php">Torna alla Home</a>
+    </button>
+
+            <div  class="outside-box" id="register">
+               <div id="error" class="error-message"></div>
+                <form id="register-form" action="register.php"  method="POST" onsubmit="return validate();">
+                     <h1>Sign Up</h1>
+                    <input id="name" name="nome" type="text" placeholder="Name" required>
+                    <input id="email" type="email" name="email" placeholder="Email" required>
+                    <input id="register-username" name="username" type="text" placeholder="Username" required>
+                    <input id="password" type="password" name="password" placeholder="Password" required>
+                
+                
+                <button id="SubmitButton" type="submit">Sign Up</button>
+                
+             </form>
+             <div class="terms">
+                    <input type="checkbox" id="checkbox" required>
+                    <label for="checkbox">I agree to these <a href="#">Terms & Conditions</a></label>
+                </div>
+                <div class="member">
+                    Already a member? <a href="login.html">Login Here</a>
+                </div>
+            </div>
+
+   
+</body>
+</html>
